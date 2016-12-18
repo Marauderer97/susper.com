@@ -337,6 +337,26 @@ clear:both;
 	top: 0px;
 	z-index: -10;
 }
+#navbar-homepage{
+  position:absolute;
+  top:-6px;
+  display:inline;
+  white-space:nowrap;
+}
+#logo{
+  height:auto;
+  width:auto; 
+  max-width:200px;
+  max-height:32px;
+  vertical-align:middle;
+}
+#topmenu{
+  position:absolute;
+  top:12px;left:80px;
+  display:inline;
+  white-space:nowrap;
+  font-size:2em;
+}
 
 div.bookmarkList {
 	margin-top:3em;
@@ -782,6 +802,9 @@ img.deleteIcon, img.recommendIcon {
 img.bookmarkIcon {
   height: 18px;
   width: 18px;
+}
+img#biglogo{
+  margin: auto;
 }
 
 .thumblink img {

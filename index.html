@@ -28,6 +28,7 @@ open about:config and set security.fileuri.strict_origin_policy to ‘false.’
   <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
 
   <script src="bootstrap/js/jquery.min.js" type="text/javascript" ></script>
+  <script src="js/susper-index.js" type="text/javascript" ></script>
   <script src="bootstrap/js/bootstrap.min.js" type="text/javascript" ></script>
   <script src="bootstrap/js/docs.min.js" type="text/javascript" ></script>
   
@@ -54,36 +55,6 @@ open about:config and set security.fileuri.strict_origin_policy to ‘false.’
   <!--[if lte IE 7.0]>
    <link rel="stylesheet" type="text/css" media="screen" href="css/ie7.css" />
   <![endif]-->
-  <script type="text/javascript" src="./bootstrap/js/typeahead.jquery.min.js"></script>
-  <script type="text/javascript">
-  //<!--
-     var suggestMatcher = function() {
-       return function opensearch(q, cb) {
-       	 $.getJSON(suggestUrl + "&q="+ q, function(data) {
-           	var parsed = [];
-            for (var i = 0; i < data[0][1].length; i++) {
-                var row = data[0][1][i];
-                if (row) {
-                    parsed[parsed.length] = {
-                        data: [row],
-                        value: row,
-                        result: row
-                    };
-                };
-            };
-            cb(parsed);
-          });
-        };
-      };
-    $(document).ready(function() {
-      $('#search').typeahead({hint:false,highlight:true,minLength:1}, {
-    	name: 'states',
-    	displayKey: 'value',
-    	source: suggestMatcher()
-      });
-    });
-  //-->
-  </script>
   <link rel="search" type="application/opensearchdescription+xml" title="susper.com'" href="susper.xml" />  
   <style type="text/css">.twitter-typeahead {margin: 0px;padding: 0px;top:2px;}</style> <!-- fix for input window -->
 </head>
@@ -99,10 +70,10 @@ open about:config and set security.fileuri.strict_origin_policy to ‘false.’
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a id="navbar-homepage" class="navbar-brand" href="http://susper.com" style="position:absolute;top:-6px;display:inline;white-space:nowrap;">
-              <img id="logo" class="yacylogo" src="images/susper.svg" alt="YaCy" style="height:auto; width:auto; max-width:200px; max-height:32px;vertical-align:middle">
+            <a id="navbar-homepage" class="navbar-brand" href="http://susper.com">
+              <img id="logo" class="yacylogo" src="images/susper.svg" alt="YaCy">
             </a>
-            <span id="topmenu" style="position:absolute;top:12px;left:80px;display:inline;white-space:nowrap;font-size:2em;"></span>
+            <span id="topmenu"></span>
           </div>
           <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
@@ -127,7 +98,7 @@ open about:config and set security.fileuri.strict_origin_policy to ‘false.’
 <div class="container-fluid">
   <div class="starter-template">
 
-	<h2 class="yacy"><a href="http://yacy.net" class="yacylogo" id="homepage"><img src="images/susper.svg" alt="YaCy" id="biglogo" style="margin: auto;"/></a></h2>
+	<h2 class="yacy"><a href="http://yacy.net" class="yacylogo" id="homepage"><img src="images/susper.svg" alt="YaCy" id="biglogo"/></a></h2>
     <h2 class="yacy" id="greeting"></h2>
 
     <form class="search form-inline" action="yacysearch/index.html" method="get" id="searchform" accept-charset="UTF-8">
@@ -154,16 +125,5 @@ open about:config and set security.fileuri.strict_origin_policy to ‘false.’
     </form>
   </div>
 </div>
-<!-- modify content according to query url attributes -->
-<script type="text/javascript">
-document.getElementById("title").appendChild(document.createTextNode(headline));
-document.getElementById("topmenu").appendChild(document.createTextNode(headline));
-document.getElementById("greeting").appendChild(document.createTextNode(greeting));
-document.getElementById("navbar-homepage").setAttribute("href", homepage);
-document.getElementById("homepage").setAttribute("href", homepage);
-document.getElementById("logo").setAttribute("src", logo.replace("../",""));
-document.getElementById("biglogo").setAttribute("src", logo.replace("../",""));
-document.getElementById("search").setAttribute("placeholder", queryplaceholder);
-</script>
 </body>
 </html>
