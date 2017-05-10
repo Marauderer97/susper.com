@@ -28,26 +28,31 @@
 </div>
 -->
 <script>
-  $(document).ready(function(){
-    var isFirefox = typeof InstallTrigger !== 'undefined';
-    if(isFirefox === false){
-      $("#set-susper-default").remove();
-      $(".input-group-btn").addClass("align-search-btn");
-      $("#navbar-search").addClass("align-navsearch-btn");
+  $(document).ready(function () {
+    //var isFirefox = typeof InstallTrigger !== 'undefined';
+
+    //if (isFirefox === false) {
+    //    $("#set-susper-default").remove();
+    //    $(".input-group-btn").addClass("align-search-btn");
+    //    $("#navbar-search").addClass("align-navsearch-btn");
+    //}
+
+    if (window.external && window.external.IsSearchProviderInstalled) {
+        var isInstalled = window.external.IsSearchProviderInstalled("http://susper.com");
+
+        if (!isInstalled) {
+            $("#set-susper-default").show();
+        }
     }
-    if(window.external && window.external.IsSearchProviderInstalled){
-      var isInstalled = window.external.IsSearchProviderInstalled("http://susper.com");
-      if(!isInstalled){
-        $("#set-susper-default").show();
-      }
-    }
-    $("#install-susper").on("click", function(){
-      window.external.AddSearchProvider("http://susper.com/susper.xml");
+
+    $("#install-susper").on("click", function () {
+        window.external.AddSearchProvider("http://susper.com/susper.xml");
     });
-    $("#cancel-installation").on("click", function(){
-      $("#set-susper-default").remove();
+
+    $("#cancel-installation").on("click", function () {
+        $("#set-susper-default").remove();
     });
-  });
+});
 </script>
 <script>
   (function(){
@@ -59,5 +64,5 @@
   })();
 </script>
 <app-root></app-root>
-<script type="text/javascript" src="inline.570ff1f31380a494b54f.bundle.js"></script><script type="text/javascript" src="vendor.a14d615cdea33d06c37b.bundle.js"></script><script type="text/javascript" src="main.198bd0e13ec06244ba13.bundle.js"></script></body>
+<script type="text/javascript" src="inline.e941382de800cc3e1dc4.bundle.js"></script><script type="text/javascript" src="vendor.a14d615cdea33d06c37b.bundle.js"></script><script type="text/javascript" src="main.a3de4108bc4bc0ab7892.bundle.js"></script></body>
 </html>
