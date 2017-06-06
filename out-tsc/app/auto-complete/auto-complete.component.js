@@ -27,8 +27,9 @@ export var AutoCompleteComponent = (function () {
             if (query) {
                 _this.autocompleteservice.getsearchresults(query).subscribe(function (res) {
                     if (res[0]) {
-                        console.log(res[1]);
-                        _this.results = res[0] + res[1];
+                        // console.log(res[1]);
+                        _this.results = res[1];
+                        _this.results.concat(res[0]);
                     }
                     else {
                         _this.results = [];
