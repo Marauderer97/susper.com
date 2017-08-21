@@ -2,14 +2,14 @@
   "static": {
     "urls": {
       "/susper.com/not-found-bg.8f346a53ee078b98deb0.jpg": "f41afa13621425291e1a9bd20dc050c17fbde946",
-      "/susper.com/main.eb2b4601297666c99bb4.bundle.js": "827295c2bccee5d76ad4d0833a88b4c704950980",
+      "/susper.com/main.4119e3477468765ca174.bundle.js": "0b7cca391ea4c907ce9f1fed88c2567e4d2accd1",
       "/susper.com/sw-register.c349237a6b1ad2a30c8d.bundle.js": "a39b838701bf5562335e3d28ac86f9ca27f83c52",
       "/susper.com/vendor.85f4a9ef6d8bf47a9f7b.bundle.js": "62163c045b3208b23ec093af5e79e94503715b66",
-      "/susper.com/inline.4d50d8848aee68bd26f8.bundle.js": "282d0709d2f3a88205d5294a66f8624e2c5ae76d",
+      "/susper.com/inline.976eb158d098173bf4b7.bundle.js": "47ba356710929b5cce5f73d7437bd3e65b65ab7a",
       "/susper.com/styles.d41d8cd98f00b204e980.bundle.css": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
       "/susper.com/assets/chart.js": "990d101393bbf1d9826ede90113989256bf1756b",
-      "/susper.com/assets/css/base.css": "f33d855f3fd7c059981974cf51853ae776db7e24",
       "/susper.com/assets/css/bootstrap-base.css": "04286a6357f4cf16b53b800f72e0c13a2d293d22",
+      "/susper.com/assets/css/base.css": "f33d855f3fd7c059981974cf51853ae776db7e24",
       "/susper.com/assets/css/dashboard.css": "9a79198285f8bfd83a01c311d9a1929c1f138864",
       "/susper.com/assets/css/ie6.css": "3edd745eb42f7defcd95d1e49431bfbd67482f65",
       "/susper.com/assets/css/ie7.css": "6b40d996a70ca5832260ecd0ee8f9b9f04d2be3d",
@@ -39,7 +39,7 @@
       "/susper.com/assets/images/terminal.png": "2aa0054d6e388a6cd5630e3eca2350cfb289955b",
       "/susper.com/assets/images/YaCyLogo2011_60.png": "954f9d626d69a7861e9e84735c44b0a8bc759c97",
       "/susper.com/favicon.ico": "1214df2ad2bb72333b2cf64a4e5e101b25c321e2",
-      "/susper.com/index.html": "cf3ffcb7ee8218f68d62469aa8d3dc857c2a5a0e"
+      "/susper.com/index.html": "bf384e655a03090d69e3d10dc5be8167ce33ac07"
     },
     "_generatedFromWebpack": true
   }
